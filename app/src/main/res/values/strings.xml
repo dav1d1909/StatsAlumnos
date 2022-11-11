@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">StatsAlumnos</string>
+    <string name="btn_regAlumno">Registrar alumno</string>
+    <string name="btn_regStats">Registrar resultados</string>
+    <string name="btn_listarAlumno">Listar resultados de un alumno</string>
+    <string name="btn_listarGeneral">Listar resultados generales</string>
 </resources>
