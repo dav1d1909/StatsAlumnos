@@ -37,12 +37,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void registrarStats(View v){
-        Intent i = new Intent(this, NombreAlumnosStatsActivity.class);
+        Intent i = new Intent(this, NombreAlumnoStatsActivity.class);
 
         startActivity(i);
     }
     public void listarStatsAlumno(View v){
-        Intent i = new Intent(this, NombreAlumnosListaActivity.class);
+        Intent i = new Intent(this, NombreAlumnoListaActivity.class);
 
         startActivity(i);
     }

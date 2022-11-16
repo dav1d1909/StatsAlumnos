@@ -1,8 +1,36 @@
 <resources>
     <string name="app_name">StatsAlumnos</string>
     <string name="btn_regAlumno">Registrar alumno</string>
+    <string name="btn_conAlumno">Consultar alumno</string>
+    <string name="btn_volver">volver</string>
     <string name="btn_regStats">Registrar resultados</string>
     <string name="btn_listarAlumno">Listar resultados de un alumno</string>
     <string name="btn_listarGeneral">Listar resultados generales</string>
+    <string name="btn_registrar">registrar</string>
+    <string name="btn_primera">Primera evaluacion</string>
+    <string name="btn_tercera">Tercera evaluacion</string>
     <string name="miDB">mi.db</string>
+    <string name="txt_usuario">Usuario</string>
+    <string name="txt_grupo">Grupo</string>
+    <string name="txt_sexo">Sexo</string>
+    <string name="txt_edad">Edad</string>
+    <string name="txt_flex">Flexibilidad</string>
+    <string name="txt_fuer">Fuerza</string>
+    <string name="txt_vel">Velocidad</string>
+    <string name="txt_res">Resitencia</string>
+
+    <string-array name="array_grupo">
+        <item>1ºA</item>
+        <item>1ºB</item>
+        <item>1ºC</item>
+        <item>1ºD</item>
+        <item>1ºE</item>
+        <item>1ºF</item>
+        <item>1ºG</item>
+    </string-array>
+    <string-array name="array_sexo">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
 </resources>
