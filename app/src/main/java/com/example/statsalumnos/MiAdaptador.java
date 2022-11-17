@@ -121,14 +121,14 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MiViewHolder> 
         holder.txtgrupo.setText("Grupo: "+lista.get(position).getGrupo());
         holder.txtsexo.setText("Sexo: "+lista.get(position).getSexo());
         holder.txtedad.setText("Edad: "+lista.get(position).getEdad());
-        holder.txtflex1.setText("Flexibilidad 1: "+lista.get(position).getFlex1());
-        holder.txtflex3.setText("Flexibilidad 3: "+lista.get(position).getFlex3());
-        holder.txtfuer1.setText("Fuerza 1: "+lista.get(position).getFuer1());
-        holder.txtfuer3.setText("Fuerza 3: "+lista.get(position).getFuer3());
-        holder.txtvel1.setText("Velocidad 1: "+lista.get(position).getVel1());
-        holder.txtvel3.setText("Velocidad 3: "+lista.get(position).getVel3());
-        holder.txtres1.setText("Resistencia 1: "+lista.get(position).getRes1());
-        holder.txtres3.setText("Resistencia 3: "+lista.get(position).getRes3());
+        holder.txtflex1.setText("Flexibilidad 1: "+lista.get(position).getFlex1()+"cm");
+        holder.txtflex3.setText("Flexibilidad 3: "+lista.get(position).getFlex3()+"cm");
+        holder.txtfuer1.setText("Fuerza 1: "+lista.get(position).getFuer1()+"m");
+        holder.txtfuer3.setText("Fuerza 3: "+lista.get(position).getFuer3()+"m");
+        holder.txtvel1.setText("Velocidad 1: "+lista.get(position).getVel1()+"s");
+        holder.txtvel3.setText("Velocidad 3: "+lista.get(position).getVel3()+"s");
+        holder.txtres1.setText("Resistencia 1: "+lista.get(position).getRes1()+"m");
+        holder.txtres3.setText("Resistencia 3: "+lista.get(position).getRes3()+"m");
 
     }
     @Override
