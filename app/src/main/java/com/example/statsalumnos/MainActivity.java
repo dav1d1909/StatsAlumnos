@@ -22,13 +22,13 @@ public class MainActivity extends AppCompatActivity {
                         "grupo VARCHAR(20)," +
                         "edad INTEGER," +
                         "flex1 INTEGER DEFAULT -1," +
-                        "flex2 INTEGER DEFAULT -1," +
+                        "flex3 INTEGER DEFAULT -1," +
                         "fuer1 INTEGER DEFAULT -1," +
-                        "fuer2 INTEGER DEFAULT -1," +
+                        "fuer3 INTEGER DEFAULT -1," +
                         "vel1 INTEGER DEFAULT -1," +
-                        "vel2 INTEGER DEFAULT -1," +
+                        "vel3 INTEGER DEFAULT -1," +
                         "res1 INTEGER DEFAULT -1," +
-                        "res2 INTEGER DEFAULT -1)"
+                        "res3 INTEGER DEFAULT -1)"
         );
     }
     public void registrarAlumno(View v){

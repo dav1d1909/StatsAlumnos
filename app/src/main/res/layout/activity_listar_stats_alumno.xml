@@ -9,8 +9,22 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lista_alumno"
-        android:layout_width="374dp"
-        android:layout_height="681dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="25dp" />
+        android:layout_width="373dp"
+        android:layout_height="612dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="volver"
+        android:text="@string/btn_volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lista_alumno" />
 </androidx.constraintlayout.widget.ConstraintLayout>

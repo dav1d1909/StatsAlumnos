@@ -3,6 +3,7 @@ package com.example.statsalumnos;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,35 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MiViewHolder> 
             txtid = itemView.findViewById(R.id.txt_id);
 
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view){
+
+                    AlertDialog.Builder ab = new AlertDialog.Builder(itemView.getContext());
+                    ab.setTitle("Modificar alumno");
+                    ab.setMessage("¿Seguro que desea modificar el alumno " + txtusuario.getText().toString() + "?");
+                    ab.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent in = new Intent(itemView.getContext(),ModificarAlumnoActivity.class);
+                            in.putExtra("id",Integer.parseInt(txtid.getText().toString()));
+                            itemView.getContext().startActivity(in);
+
+
+                        }
+                    });
+                    ab.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Toast.makeText(itemView.getContext(), "Alumno no modificado", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    ab.show();
+                            }
+
+
+
+            });
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View view) {
@@ -87,18 +117,18 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.MiViewHolder> 
     public void onBindViewHolder(@NonNull MiAdaptador.MiViewHolder holder, int position) {
 
         holder.txtid.setText(""+lista.get(position).getId());
-        holder.txtusuario.setText(lista.get(position).getUsuario());
-        holder.txtgrupo.setText(lista.get(position).getGrupo());
-        holder.txtsexo.setText(lista.get(position).getSexo());
-        holder.txtedad.setText(""+lista.get(position).getEdad());
-        holder.txtflex1.setText(""+lista.get(position).getFlex1());
-        holder.txtflex3.setText(""+lista.get(position).getFlex3());
-        holder.txtfuer1.setText(""+lista.get(position).getFuer1());
-        holder.txtfuer3.setText(""+lista.get(position).getFuer3());
-        holder.txtvel1.setText(""+lista.get(position).getVel1());
-        holder.txtvel3.setText(""+lista.get(position).getVel3());
-        holder.txtres1.setText(""+lista.get(position).getRes1());
-        holder.txtres3.setText(""+lista.get(position).getRes3());
+        holder.txtusuario.setText("Usuario: "+lista.get(position).getUsuario());
+        holder.txtgrupo.setText("Grupo: "+lista.get(position).getGrupo());
+        holder.txtsexo.setText("Sexo: "+lista.get(position).getSexo());
+        holder.txtedad.setText("Edad: "+lista.get(position).getEdad());
+        holder.txtflex1.setText("Flexibilidad 1: "+lista.get(position).getFlex1());
+        holder.txtflex3.setText("Flexibilidad 3: "+lista.get(position).getFlex3());
+        holder.txtfuer1.setText("Fuerza 1: "+lista.get(position).getFuer1());
+        holder.txtfuer3.setText("Fuerza 3: "+lista.get(position).getFuer3());
+        holder.txtvel1.setText("Velocidad 1: "+lista.get(position).getVel1());
+        holder.txtvel3.setText("Velocidad 3: "+lista.get(position).getVel3());
+        holder.txtres1.setText("Resistencia 1: "+lista.get(position).getRes1());
+        holder.txtres3.setText("Resistencia 3: "+lista.get(position).getRes3());
 
     }
     @Override

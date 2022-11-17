@@ -68,6 +68,9 @@ public class RegistroStatsActivity extends AppCompatActivity {
             SQLiteDatabase myDB = openOrCreateDatabase(getResources().getString(R.string.miDB),MODE_PRIVATE,null);
             myDB.update("alumno",cv,"id = "+this.id,null);
             Toast.makeText(this, "Registro guardado", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(this, EvaluacionActivity.class);
+            i.putExtra("id",this.id);
+            startActivity(i);
         }
 }
 

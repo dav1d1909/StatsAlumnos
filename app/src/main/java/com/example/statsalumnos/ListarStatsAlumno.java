@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class ListarStatsAlumno extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_stats_alumno);
         Toast.makeText(this,"Para borrar mantener pulsado",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Para modificar pulsar brevemente",Toast.LENGTH_SHORT).show();
 
         Intent i = getIntent();
         int id1 = i.getIntExtra("id",0);
@@ -55,5 +57,10 @@ public class ListarStatsAlumno extends AppCompatActivity {
         MiAdaptador adaptador = new MiAdaptador(lista);
         rv.setAdapter(adaptador);
 
+    }
+
+    public void volver(View v){
+        Intent i = new Intent(this,NombreAlumnoListaActivity.class);
+        startActivity(i);
     }
 }

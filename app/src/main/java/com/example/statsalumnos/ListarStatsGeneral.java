@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -18,6 +20,7 @@ public class ListarStatsGeneral extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_stats_general);
         Toast.makeText(this,"Para borrar mantener pulsado",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Para modificar pulsar brevemente",Toast.LENGTH_SHORT).show();
 
         SQLiteDatabase myDB = openOrCreateDatabase(getResources().getString(R.string.miDB),MODE_PRIVATE,null);
 
@@ -51,5 +54,9 @@ public class ListarStatsGeneral extends AppCompatActivity {
         MiAdaptador adaptador = new MiAdaptador(lista);
         rv.setAdapter(adaptador);
 
+    }
+    public void volver(View v){
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 }

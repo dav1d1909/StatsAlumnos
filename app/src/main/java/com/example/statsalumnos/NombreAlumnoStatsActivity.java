@@ -25,7 +25,7 @@ public class NombreAlumnoStatsActivity extends AppCompatActivity {
         EditText text_user = findViewById(R.id.text_usuario);
         SQLiteDatabase myDB = openOrCreateDatabase(getResources().getString(R.string.miDB),MODE_PRIVATE,null);
 
-        Cursor cursor = myDB.rawQuery("SELECT * FROM alumno WHERE usuario =" + text_user.getText().toString(),null);
+        Cursor cursor = myDB.rawQuery("SELECT * FROM alumno WHERE usuario = '" + text_user.getText().toString()+"'",null);
 
 
         if (!cursor.moveToNext()){

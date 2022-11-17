@@ -24,13 +24,12 @@ public class NombreAlumnoListaActivity extends AppCompatActivity {
         EditText text_user = findViewById(R.id.text_usuarioL);
         SQLiteDatabase myDB = openOrCreateDatabase(getResources().getString(R.string.miDB),MODE_PRIVATE,null);
 
-        Cursor cursor = myDB.rawQuery("SELECT * FROM alumno WHERE usuario =" + text_user.getText().toString(),null);
+        Cursor cursor = myDB.rawQuery("SELECT * FROM alumno WHERE usuario = '" + text_user.getText().toString()+"'",null);
 
 
         if (!cursor.moveToNext()){
             Toast.makeText(this,"Usuario no registrado",Toast.LENGTH_SHORT).show();
         } else{
-
             Intent i = new Intent(this,ListarStatsAlumno.class);
             i.putExtra("id",cursor.getInt(0));
             startActivity(i);
